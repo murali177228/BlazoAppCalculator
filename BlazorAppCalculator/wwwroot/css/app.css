@@ -182,10 +182,14 @@ app {
     }
 
     .calc-header {
-        background-color: #444444;
+        background-color: blue;
         color: white;
         padding: 0.5em 1em;
         font-family: "Montserrat", Arial, sans-serif;
         font-size: 1.3em;
+        
+    }
+    .int-calc{
+        background-color:antiquewhite;
     }
 }

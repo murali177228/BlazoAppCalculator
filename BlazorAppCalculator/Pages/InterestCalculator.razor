@@ -2,8 +2,8 @@
 @page "/interestcalculator"
 <h3>InterestCalculator</h3>
 <hr />
-<div>
-    <div class="row">
+<div class="int-calc">
+    <div class="row" style="border:groove; background-color:blue">
         <div class="calc-header">
             <b>Income</b>
         </div>
@@ -61,10 +61,10 @@
     string monthlySalary;
     double yearlySalary;
     double yearlyTax;
-    string salAterTax;
+    string salAfterTax;
     double monthlyTax;
 
-    string salAfterTax;
+    
 
     void CalculateTax()
     {
@@ -72,7 +72,7 @@
         yearlyTax = (yearlySalary) * 30 / 100;
         monthlyTax = yearlyTax / 12;
 
-        salAterTax = (Convert.ToDouble(monthlySalary) - monthlyTax).ToString();
+        salAfterTax = (Convert.ToDouble(monthlySalary) - monthlyTax).ToString();
     }
 
 
