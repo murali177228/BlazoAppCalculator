@@ -1,0 +1,79 @@
+﻿
+@page "/interestcalculator"
+<h3>InterestCalculator</h3>
+<hr />
+<div>
+    <div class="row">
+        <div class="calc-header">
+            <b>Income</b>
+        </div>
+
+
+
+    </div>
+    <div class="row">
+        <div class="col-md-3">
+            <p>Enter Monthly Salary</p>
+        </div>
+        <div class="col-md-4">
+            <input placeholder="Enter Monthly Salary" @bind="@monthlySalary" />
+        </div>
+    </div>
+    <br />
+    @*<div class="row">
+            <div class="col-md-3">
+                <p>Second Number</p>
+            </div>
+            <div class="col-md-4">
+                <input placeholder="Enter Second Number" @bind="@num2" />
+            </div>
+        </div>
+        <br />
+
+        <br />*@
+    <div class="row">
+        <div class="col-md-3">
+            <p>Result</p>
+        </div>
+        <div class="col-md-4">
+            <input readonly @bind="@salAfterTax" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-2">
+            <button @onclick="CalculateTax" class="btn btn-dark">Calculate</button>
+        </div>
+        @*<div class="col-md-2">
+                <button @onclick="SubtractNumbers" class="btn btn-primary">Subtract (−)</button>
+            </div>
+            <div class="col-md-2">
+                <button @onclick="MultiplyNumbers" class="btn btn-success ">Multiply (X)</button>
+            </div>
+            <div class="col-md-2">
+                <button @onclick="DivideNumbers" class="btn btn-info">Divide (/)</button>
+            </div>*@
+    </div>
+</div>
+
+
+@code {
+
+    string monthlySalary;
+    double yearlySalary;
+    double yearlyTax;
+    string salAterTax;
+    double monthlyTax;
+
+    string salAfterTax;
+
+    void CalculateTax()
+    {
+        yearlySalary = Convert.ToDouble(monthlySalary) * 12;
+        yearlyTax = (yearlySalary) * 30 / 100;
+        monthlyTax = yearlyTax / 12;
+
+        salAterTax = (Convert.ToDouble(monthlySalary) - monthlyTax).ToString();
+    }
+
+
+}

@@ -180,4 +180,12 @@ app {
         /* Never collapse the sidebar for wide screens */
         display: block;
     }
+
+    .calc-header {
+        background-color: #444444;
+        color: white;
+        padding: 0.5em 1em;
+        font-family: "Montserrat", Arial, sans-serif;
+        font-size: 1.3em;
+    }
 }
